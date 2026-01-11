@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxe17v5ty6662"]
+
+[ext_resource type="PackedScene" uid="uid://cugw80chhlskx" path="res://RealtimeSpeech/realtime-speech.tscn" id="1_j6dmo"]
+
+[node name="App" type="Node"]
+
+[node name="RealtimeSpeech" parent="." instance=ExtResource("1_j6dmo")]

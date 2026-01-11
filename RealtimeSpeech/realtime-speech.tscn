@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cugw80chhlskx"]
+
+[ext_resource type="Script" uid="uid://na1uppjhp551" path="res://RealtimeSpeech/RealtimeSpeech.cs" id="1_xiy4f"]
+[ext_resource type="Script" uid="uid://b16o46bhs6dyu" path="res://RealtimeSpeech/AudioCapture.cs" id="3_1oem7"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_v62h7"]
+
+[node name="RealtimeSpeech" type="Node"]
+script = ExtResource("1_xiy4f")
+
+[node name="AudioCapture" type="Node" parent="."]
+script = ExtResource("3_1oem7")
+
+[node name="MicrophoneStream" type="AudioStreamPlayer" parent="AudioCapture"]
+stream = SubResource("AudioStreamMicrophone_v62h7")
+autoplay = true
+bus = &"Record"
