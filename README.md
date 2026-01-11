@@ -24,7 +24,7 @@ Cloning this repository should be enough to get you started.
 This project is ready to go to get started. Simply clone the project:
 
 ```bash
-git clone <this-repository-url>
+git clone https://github.com/paragon-xr/Realtime-Speech-Godot-C-Sharp
 ```
 
 1. Open the project in Godot 4.x (Mono / .NET)
