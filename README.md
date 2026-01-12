@@ -71,14 +71,16 @@ Larger models provide better accuracy but require more CPU and memory.
 </ItemGroup>
 ```
 
-3. Export Settings (Required)
+3. Export Settings
 
 Vosk relies on native libraries and model files that must be included in exported
 builds.
 
-In Godot → Export → Resources → Filters to export non-resource files/folders, add the following paths:
+ - In Godot → Export → Resources → Filters to export non-resource files/folders, add the following paths:
 
 ```res://RealtimeSpeech/vosklibs/**, res://RealtimeSpeech/models/**```
+
+ - For Android, check the box "Record Audio" in the Options tab
 
 
 Without this step, speech recognition will not work in exported builds.
@@ -130,11 +132,11 @@ Currently Supported
 
 - macOS*
 
+- Android arm64, including VR
+
 _*There is a known Godot 4.5 bug with mic problems for macOS. It has been fixed with v4.6 but should work on versions before 4.5 too._
 
 Planned Support
-
-- Android (including VR, such as Meta Quest)
 
 - iOS
 

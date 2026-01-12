@@ -9,12 +9,15 @@ public static class VoskNativeLoader
         string platformFolder =
             OS.GetName() == "Windows" ? "Windows-x64" :
             OS.GetName() == "macOS" ? "macOS-universal" :
-                                        "Linux-x86_64";
+            OS.GetName() == "Linux" ? "Linux-x86_64" :
+            OS.GetName() == "Android" ? "Android-arm64" :
+                                        "Unknown";
 
         string libName =
             OS.GetName() == "Windows" ? "libvosk.dll" :
             OS.GetName() == "macOS" ? "libvosk.dylib" :
-                                        "libvosk.so";
+            OS.GetName() == "Linux" || OS.GetName() == "Android" ? "libvosk.so" :
+                                                                    "Unknown";
 
         string resPath = $"res://RealtimeSpeech/vosklibs/{platformFolder}/{libName}";
         GD.Print("Vosk native lib path: ", resPath);
